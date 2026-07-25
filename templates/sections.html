@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartDocAI - Create Document</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+<div id="loader">
+
+<div class="spinner"></div>
+
+<p>Generating Professional Document...</p>
+
+</div>
+<!-- Navbar -->
+
+<nav>
+
+<div class="logo">
+
+<i class="fa-solid fa-file-word"></i>
+
+SmartDocAI
+
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+
+<li><a href="#">Features</a></li>
+
+<li><a href="#">About</a></li>
+
+</ul>
+
+</nav>
+
+<!-- Main -->
+
+<section class="form-section">
+
+<div class="form-card">
+
+<div class="progress">
+
+<div class="progress-bar"></div>
+
+</div>
+
+<h1>Create Your Document</h1>
+
+<p>
+
+Enter your document title and choose how many sections
+you want in your report.
+
+</p>
+
+<form action="/section_names" method="POST">
+
+<label>
+
+Document Title
+
+</label>
+
+<input
+type="text"
+name="title"
+placeholder="Example: Artificial Intelligence"
+required>
+
+<label>
+
+Number of Sections
+
+</label>
+
+<input
+type="number"
+name="count"
+min="1"
+max="20"
+placeholder="Example: 6"
+required>
+
+<button type="submit">
+
+Continue
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 SmartDocAI | Professional Document Generator
+
+</p>
+
+</footer>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
